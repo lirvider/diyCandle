@@ -18,6 +18,10 @@
 
     <link rel="icon" href="styles/logo.jpg" />
 
+    <script>window.onload = function () {
+            showSlides(1);
+        };</script>
+
 </head>
 <body>
     <div id="container">
@@ -64,8 +68,9 @@
                 </p>
                 <p>
                     נשתדל לבחור כלי בעל שטח פנים גדול,
-                    </p>
-                <p> טמפרטורת ההמסה הנוכה גורמת ליצירת בריכת שעווה גדולה- מה שעוזר להפצת הריח.
+                </p>
+                <p>
+                    טמפרטורת ההמסה הנוכה גורמת ליצירת בריכת שעווה גדולה- מה שעוזר להפצת הריח.
                 </p>
                 <h3> מראה ותכונות</h3>
                 <p>
@@ -107,51 +112,82 @@
         </main>
     </div>
 
+    <!-- Container for the image gallery -->   <!--// דיב שמכיל את התמונות שמופיעות בגדול-->
+    <div class="gallaryContainer">
 
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 1</div>
-            <img src="styles/pic1.jpg" style="width:100%" alt="Soy wax">
-            <div class="slideTitle">Soy wax</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 2</div>
-            <img src="styles/pic2.jpg" style="width:100%" alt="Paraffin wax">
-            <div class="slideTitle">Paraffin wax</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 3</div>
-            <img src="styles/pic3.jpg" style="width:100%" alt="palm wax ">
-            <div class="slideTitle">palm wax</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 4</div>
-            <img src="styles/pic4.jpg" style="width:100%" alt="Bee's wax">
-            <div class="slideTitle">Bee's wax</div>
-        </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 5</div>
-            <img src="styles/pic5.jpg" style="width:100%" alt="palm wax">
-            <div class="slideTitle">palm wax</div>
+        <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="/styles/pic1.jpg" style="width:100%">
         </div>
 
+        <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="/styles/pic2.jpg" style="width:100%">
+        </div>
 
-        <!-- כפתור קדימה אחורה  -->
+        <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="/styles/pic3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="/styles/pic4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="/styles/pic5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="/styles/pic6.jpg" style="width:100%">
+        </div>
+
+
+
+        <!-- Next and previous buttons -->     <!--חצים לתמונה הבאה והתמונה הקודמת-->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
 
-    <!-- כל התמונות יוצגו מתחת לתמונה הגדולה  -->
-    <div style="text-align:center">
-        <img src="styles/pic1.jpg" style="width:50px; height:50px;" onclick="currentSlide(1)" alt="Soy wax">
-        <img src="styles/pic2.jpg" style="width:50px; height:50px;" onclick="currentSlide(2)" alt="Paraffin wax">
-        <img src="styles/pic3.jpg" style="width:50px; height:50px;" onclick="currentSlide(3)" alt="palm wax">
-        <img src="styles/pic4.jpg" style="width:50px; height:50px;" onclick="currentSlide(4)" alt="Bee's wax">
-        <img src="styles/pic5.jpg" style="width:50px; height:50px;" onclick="currentSlide(5)" alt="palm wax">
+        <!-- Image text -->      <!--דיב לשמות התמונות--> 
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
 
+        <!-- Thumbnail images -->  <!--דיב שמכיל את התמונות שמופיעות בקטן מתחת לתמונה הגדולה-->
+        <div class="row">
+
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic1.jpg" style="width:100%" onclick="currentSlide(1)" alt="שעוות סויה">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic2.jpg" style="width:100%" onclick="currentSlide(2)" alt="שעוות דקל">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic3.jpg" style="width:100%" onclick="currentSlide(3)" alt="שעוות פראפין">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic4.jpg" style="width:100%" onclick="currentSlide(4)" alt="שעוות דבורים">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic5.jpg" style="width:100%" onclick="currentSlide(5)" alt="שעוות דקל">
+            </div>
+
+            
+            <div class="column">
+                <img class="demo cursor" src="/styles/pic6.jpg" style="width:100%" onclick="currentSlide(6)" alt="שעוות פראפין">
+            </div>
+
+
+
+
+
+        </div>
     </div>
+
+
     <footer>
         <span>
             <span> <a href="map.html">מפת אתר</a> </span> &nbsp;|&nbsp;
@@ -163,38 +199,6 @@
         </span>
     </footer>
 
-    <script>
-        var slideIndex = 1; //הגדרה של משתנה המציין את מספר המצגת הנוכחית
-        showSlides(slideIndex); //הפעלת הפונקציה השלישית שלנו. העלייה של התמונה הראשונה בגלריה.ד1
-
-        // חץ מקדם תמונה קדימה
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // חץ מחזיר תמונה אחורה
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i; //משתנה בשם I
-            var slides = document.getElementsByClassName("mySlides"); //משתנה שלוקח את כל ה-div של התמונות למערך.
-            var dots = document.getElementsByClassName("dot"); //משתנה לתמונות הקטנות למטה.
-
-            if (n > slides.length) //דואג שמתמונה 5 נעבור ל-1 ולא ל-6 (יש 5 תמונות)
-            { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length } // אם מיקום התמונה קטן מ-1 נעבור ל-5 (בהתאם לכמות התמונות)
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";// לשנות לתמונות עם סטייל ולעשות אותן שקופות
-        }
-    </script>
 </body>
 
 </html>
